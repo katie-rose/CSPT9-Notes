@@ -1,5 +1,7 @@
 # Intro To Python
 
+![](https://i.imgur.com/CbVXd52.png)
+
 ## Comments
 
 ```text
@@ -9,6 +11,3 @@ made out of a mult-line
 string constant.
 """
 ```
-
-
-
