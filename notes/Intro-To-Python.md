@@ -96,142 +96,263 @@ No brackets. You can use tabs, but you can't mix tabs and spaces.
 
 **Lists**
 
-Group of items we reference by index.
-
-- Mutable. (We can change the contents)
-- Duplicate items.
+- Group of items we reference by index
+- Mutable, we can change the content
+- Can have duplicate Items
+- Can iterate through it
+- Passed by reference
 
 ```python
-# create it
+############################################
+#CREATE LIST
+############################################
+
 my_colors = ["red", "orange", "yellow"]
 
-# add vs. insert
-# add to end
-my_colors.appends("green")
-# insert at i
+############################################
+#ADD ITEMS
+############################################
+my_colors = ["red", "orange", "yellow"]
+
+#add to end
+my_colors.append("green")
+#["red", "orange", "yellow", "green"]
+
+#insert at i (or index 2)
 my_colors.insert(2, "blue")
+#["red". "orange", "blue", "yellow"]
 
-# remove vs. pop vs. del
-# removes item
-my_colors.remote("orange")
-# removes last item
-my_colors.pop()
-# removes item at i
-del my_colors[1]
-
-# traverse
-for i in range ( 0, len(my_colors) ):
-# access an item
-print(my_colors[i])
-```
-
-**List Slices**
-
-```python
+############################################
+#REMOVE ITEMS
+############################################
 my_colors = ["red", "orange", "yellow"]
 
-# 1st item you want vs. 1st item you DON'T want
+#removes item
+my_colors.remove("orange")
+#["red", "yellow"]
+
+#removes last item
+my_colors.pop()
+#["red", "orange"]
+
+#removes item at i (or index 2)
+del my_colors[2]
+#["red", "orange"]
+
+#traverse
+for i in range( 0 , len(my_colors) ):
+	#access an item
+	print( my_colors[i] )
+
+############################################
+#LIST SLICES
+############################################
+my_colors = ["red", "yellow", "orange"]
+
+#keep items at indexes 0 through not including 2
 primary_colors = my_colors[0:2]
-# colors will contain red and yellow only
+#["red", "yellow"]
 
-# 1st item you want goes to end
+#keep items at indexes 1 through the end
 primary_colors = my_colors[1:]
+#["orange", "yellow"]
 
-# 1st item you DON'T want starts at beginning
+#keep items from the beginning up to index 2
 primary_colors = my_colors[:2]
+#["red", "orange"]
+
+#creates a copy of a list
+primary_colors = my_colors[:]
+#["red", "yellow", "orange"]
+
+############################################
+#FILTER LIST
+############################################
+my_colors = ["red", "orange", "yellow"]
+
+#filter out all colors with names less than 5 chars
+new_colors = [c for c in my_colors if len(c) < 5]
+#["red"]
 ```
 
 **List Comprehensions**
 
+List comprehensions are one cool and unique feature of Python.
+They essentially act as a terse and concise way of initializing
+and populating a list given some expression that specifies how
+the list should be populated.
+
 ```python
-my_colors = ["red", "yellow", "orange", "blue", "green"]
+x = [i+1 for i in range(5)]
+#[1,2,3,4,5]
 
-# returns new new list of colors with less # than 5 chars
+#if statement
+x = [1,2,3,4,5,6,7,8,9,10]
+y = [int(i) for i in x if int(i) % 2 == 0]
+#[2,4,6,8,10]
 
-new_colors = [c for c in my_colors if len(c) < 5]
+#if else statement
+x = [1,2,3,4,5,6,7,8,9,10]
+y = [int(i) if int(i)%2 == 0 else 'nope' for i in x]
+#['nope', 2, 'nope', 4, 'nope', 6, 'nope', 8, 'nope', 10]
 ```
 
 **Tuples**
 
-Group of items we reference by index.
+- Group of items we reference by index
+- Not Mutable
+- Can have duplicate Items
+- Can iterate through it
+- Passed by reference
 
-- Immutable.
-- Duplicate items.
-- Always in ()
+```python
+############################################
+#CREATE TUPLE
+############################################
 
-![picture 2](../images/8ccc32ee57764bbd89e09aed78998b6f30146f6bcd3065e04f1af952370fe776.png)
+my_animals = ("dog", "cat", "fish")
+
+#create tuple with 1 element
+my_taco = ("cat",)
+
+############################################
+#GET TUPLE LENGTH
+############################################
+my_animals = ("dog", "cat", "fish")
+
+len( my_animals )
+#3
+
+############################################
+#TRAVERSE THE TUPLE
+############################################
+
+for animal in my_animals:
+	print( animal )
+
+############################################
+#NOT ALLOWED
+############################################
+
+#add items
+#change items
+#remove items
+```
 
 **Sets**
 
-Unordered group of items.
-
-- Mutable (cannot CHANGE, only ADD)
-
-- NO duplicate items.
+- Unordered group of items
+- Semi-mutable (can add, can't change)
+- No duplicate items
+- Can iterate through it
+- Passed by reference
 
 ```python
-# create it
-my_cities = {"Dallas", "Houston", "Austin" }
+############################################
+#CREATE IT
+############################################
 
-# add
+my_cities = {"Dallas", "Houston", "Austin"}
+
+############################################
+#ADD ITEMS
+############################################
+my_cities = {"Dallas", "Houston", "Austin"}
+
+#add a single item
 my_cities.add("San Antonio")
+#{"Dallas", "Houston", "Austin", "San Antonio"}
+
+#add multiple items
 my_cities.update(["Boerne", "Galveston"])
+#{"Dallas", "Houston", "Austin", "Boerne", "Galveston"}
 
-# change - NOT ALLOWED
-my_cities[2] = "El Paso"
+############################################
+#REMOVE ITEMS
+############################################
+my_cities = {"Dallas", "Houston", "Austin"}
 
-# remove
+#remove by value
 my_cities.remove("Houston")
-# remove last item
-my_cities.pop()
+#{"Dallas", "Austin"}
 
-# length
-print(len(my_cities))
-# tarverse
-for city in my_cities) ):
-# access an item
-print(city)
+#remove last item that was added to the set
+my_cities.pop()
+#{"Dallas", "Houston"}
+
+############################################
+#GET SET LENGTH
+############################################
+my_cities = {"Dallas", "Houston", "Austin"}
+
+len(my_cities)
+#3
+
+############################################
+#NOT ALLOWED
+############################################
+
+#change items
 ```
 
 **Dictionaires**
 
 Group of values we reference through their keys.
 
-- Mutable.
-- Duplicate items.
+- Group of values we reference through their keys
+- Mutable
+- Can have duplicate items
+- Not iterable
+- Passed by reference
 
 ```python
-# create it
+############################################
+#CREATE DICTIONARY
+############################################
+
 my_grades = {
-# "key" : "value",
-"Math": 88,
-"Science": 85,
-"English": 91,
-"History": 92
+	#"key": "value"
+	"Math": 42,
+	"Science": 42,
+	"English": 42,
+	"History": 42
 }
 
-# access
-print(my_grades.get("History"))
+############################################
+#ADD ITEMS
+############################################
+my_grades = {"Math": 42, "Science": 42, "English": 42, "History": 42}
 
-# add
-# use new key
-my_grades["Art"] = 81
+#add new item assuming "Art" doesn't already exist
+my_grades["Art"] = 0
 
-# change
-my_grades["English"] = 93
+############################################
+#CHANGE ITEMS
+############################################
+my_grades = {"Math": 42, "Science": 42, "English": 42, "History": 42}
 
-# remove specific item
+#update value of existing item
+my_grades["Math"] = 17
+
+############################################
+#REMOVE ITEMS
+############################################
+my_grades = {"Math": 42, "Science": 42, "English": 42, "History": 42}
+
+#remove a specific item
 my_grades.pop("Science")
-# remove last item
-my_grades.popitem()
+#{"Math": 42, "English": 42, "History": 42}
 
-# length
-print (len(my_grades) )
+#remove last item
+my_grade.popitem()
+#{"Math": 42, "Science": 42, "English": 42}
 
-# traverse
-for grade in my_grades:
+############################################
+#ACCESS VALUES
+############################################
+my_grades = {"Math": 42, "Science": 42, "English": 42, "History": 42}
 
-#access an item
-print(grade + ":" + my_grades[grade])
+my_grades.get("History")
+#42
 
 ```
