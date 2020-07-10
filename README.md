@@ -2,7 +2,8 @@
 
 ## Training Kit + Various Sources Notes
 
-- [Intro To Python](notes/Intro-To-Python.md)
+- [Intro To Python I](notes/Intro-To-Python.md)
+- [Intro To Python II](notes/Intro-To-Python-II.md)
 
 ## Lecture Notes
 
