@@ -7,4 +7,4 @@
 
 ## Lecture Notes
 
-- [7/7/20](notes/lectures/Lecture-01.md)
+- [7/7/20](notes/lectures/7-7-20.md)
