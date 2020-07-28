@@ -7,7 +7,6 @@
 - [Intro To Python I](notes/Intro-To-Python.md)
 - [Intro To Python II](notes/Intro-To-Python-II.md)
 - [Intro To Python III](notes/Intro-To-Python-III.md)
-- [Intro To Python IV](notes/Intro-To-Python-IV.md)
 
 ### Data Structures
 
@@ -24,3 +23,5 @@
 - [7/9/20](notes/lectures/7-9-20.md)
 - [7/13/20](notes/lectures/7-13-20.md)
 - [7/15/20](notes/lectures/7-15-20.md)
+- [7/21/20](notes/lectures/7-21-20.md)
+- [7/27/20](notes/lectures/7-27-20.md)
