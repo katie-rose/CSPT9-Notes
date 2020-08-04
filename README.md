@@ -15,9 +15,14 @@
 - [Data Structures III](notes/Data-Structures-III.md)
 - [Data Structures IV](notes/Data-Structures-IV.md)
 
-## Lecture Notes
+### Algorithms
 
-### Python
+- [Algorithms - Iterative Sorting](notes/Algorithms-Iterative-Sorting.md)
+- [Algorithms - Recursive Sorting](notes/Algorithms-Recursive-Sorting.md)
+- [Algorithms - First Pass Solution](notes/Algorithms-First-Pass-Solution.md)
+- [Algorithms - Writing Better Solutions](notes/Algorithms-Writing-Better-Solutions.md)
+
+## Lecture Notes
 
 - [7/7/20](notes/lectures/7-7-20.md)
 - [7/9/20](notes/lectures/7-9-20.md)
